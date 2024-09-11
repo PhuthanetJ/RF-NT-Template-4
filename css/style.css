@@ -71,17 +71,26 @@ label {
 #main-content {
   background-color: rgba(255, 255, 255, 0.5); /* Added white background for the main content */
   overflow-y: auto; /* Ensure main content is scrollable */
-  padding: 48px 48px 0px 48px;
+  padding: 48px 20px 0px 20px;
 }
 #main-content-login {
   background-color: rgba(255, 255, 255, 0.5); /* Added white background for the main content */
   overflow-y: auto; /* Ensure main content is scrollable */
-  padding: 70px 36px 0px 36px;
+  padding: 70px 20px 0px 20px;
 }
 
 .icon-nt {
-  max-height: 64px;
-  max-width: 332px;
+  max-height: 80px;
+  max-width: 300px;
+  object-fit: contain;
+  object-position: left;
+  margin: 10px;
+}
+
+.promo {
+  max-height: 150px;
+  max-width: 450px;
+  object-fit: contain;
 }
 
 .top-bar {
@@ -111,6 +120,9 @@ label {
   background-color: #ffffff;
   width: 100%;
   z-index: 3;
+  border-radius: 4px;
+  max-width: 450px;
+  align-self: center;
 }
 
 .bottom-nav .nav-item {
@@ -133,13 +145,33 @@ label {
 .content-body {
   background-color: #ccc;
   width: 450px;
-  margin-left: 40px;
-  margin-right: 40px;
   font-size: 22px;
   line-height: 0.9;
   justify-content: center;
   align-items: center;
   padding: 20px 24px 20px 24px;
+  border-radius: 40px;
+}
+
+.body-long-content{
+  max-height: 383px; 
+  overflow-y: auto; 
+  padding-right: 20px; 
+}
+/* Custom Scrollbar */
+.body-long-content::-webkit-scrollbar {
+  width: 15px; /* ความกว้างของ scrollbar */
+}
+
+.body-long-content::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1; /* สีของ thumb */
+  border-radius: 5px; /* มุมโค้งของ thumb */
+  border: 3px solid #f1f1f1; /* ขอบของ thumb */
+}
+
+.body-long-content::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* สีของ track */
+  border-radius: 5px; /* มุมโค้งของ track */
 }
 
 .main-content {
@@ -168,9 +200,10 @@ label {
 }
 
 .btn {
-  font-size: 20px;
+  font-size: 16px;
   max-height: 40px !important;
   height: 40px !important;
+  border-radius: 25px;
 }
 
 .btn-primary,
@@ -186,7 +219,7 @@ label {
   margin-bottom: 10px;
   padding: 10px 10px;
   font-size: 18px;
-  border-radius: 5px;
+  border-radius: 25px;
 }
 
 .btn-custom-primary {
@@ -226,7 +259,7 @@ label {
   background-color: #F4A022;
   color: white;
   position: relative;
-  border-radius: 4px;
+  border-radius: 25px;
   text-decoration: none;
 }
 
@@ -234,7 +267,7 @@ label {
   background-color: #ffffff;
   color: #F4A022;
   border: 1px solid #F4A022;
-  border-radius: 4px;
+  border-radius: 25px;
   text-decoration: none;
 }
 
@@ -342,7 +375,11 @@ hr {
 }
 
 .button-extra {
-  min-height: 60px !important;
+  background-color: transparent;
+  color: #53595f;
+  border: 0px;
+  font-size: 18px !important;
+  text-align: left;
   height: 60px !important;
 }
 
@@ -404,6 +441,7 @@ hr {
     flex-direction: row;
     background-color: #ffffff;
     justify-content: space-between;
+    max-width: none;
   }
 
   .box-content {
